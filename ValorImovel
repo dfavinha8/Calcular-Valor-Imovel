@@ -1,0 +1,26 @@
+using System;
+using System.Globalization;
+
+namespace First
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double largura, comprimento, preçom2, area, preço;
+            Console.WriteLine("Introduza a largura da divisão ");
+            largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Introduza o comprimento da divisão ");
+            comprimento = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Introduza o preço por m2 definido para esta zona ");
+            preçom2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            area = largura * comprimento;
+            preço = area * preçom2;
+
+            Console.WriteLine("AREA = " + area.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("PREÇO = "+ preço.ToString("F2", CultureInfo.InvariantCulture));
+            Console.ReadLine();
+        }
+    }
+}
